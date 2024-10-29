@@ -1,0 +1,21 @@
+@use "./_variables" as variables;
+
+
+@media screen and (min-width: 1350px) {
+    .layout-main {
+        width: 1280px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+}
+
+
+@media (max-width: 991px) {
+    .layout-wrapper {
+        .layout-main-container {
+            padding: 0 0.8rem;
+        }
+
+    }
+}
