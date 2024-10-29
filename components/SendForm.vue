@@ -30,7 +30,7 @@ const onClickSend = async () => {
         <form class="sendForm card" @submit.prevent="onClickSend">
             <div class="form-header">
                 <h1>Send FIL</h1>
-                <button id="closeFormBtn" class="close-button" @click="emit('close')">X</button>
+                <button class="close-button" @click="emit('close')">X</button>
             </div>
             
             <div class="form-body">            
@@ -89,12 +89,17 @@ const onClickSend = async () => {
     justify-content: center;
     z-index: 1000;
 }
+
+.sendForm {
+    margin: 0 0.8rem;
+}
+
 .card {
     background-color: #ffffff;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    min-width: 350px;
+    min-width: 220px;
     max-width: 640px;
     width: 100%;
 }
@@ -118,10 +123,10 @@ const onClickSend = async () => {
     background: none;
     border: none;
     border-radius: 50%;
-    padding: 2px;
+    padding: 0px;
     width: 30px;
     height: 30px;
-    font-size: 1.5r em;
+    font-size: 1.5rem;
     cursor: pointer;
     color: #555;
     transition: color 0.3s;
@@ -145,6 +150,7 @@ const onClickSend = async () => {
 }
 
 .textarea-field {
+    background-color: #ffffff;
     font-family: Arial, sans-serif;
     padding: 10px;
     border: 1px solid #ddd;
@@ -157,6 +163,7 @@ const onClickSend = async () => {
 }
 
 .input-field {
+    background-color: #ffffff;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;

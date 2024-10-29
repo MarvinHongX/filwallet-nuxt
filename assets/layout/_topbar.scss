@@ -1,15 +1,19 @@
-.layout-topbar {
+@use "./_variables" as variables;
+
+.layout-topbar-container {
     position: fixed;
     height: 4.5rem;
     z-index: 997;
     left: 0;
     top: 0;
     width: 100%;
-    padding: 5px 50px;
+    // padding: 5px 50px;
+    padding: 0 3rem;
+    transition: margin-left variables.$transitionDuration;
     background-color: var(--surface-card);
     align-items: center;
 
-    .layout-topbar-wrapper {
+    .layout-topbar {
         height: 100%;
         display: flex;
         flex-direction: row;
