@@ -17,6 +17,11 @@ onMounted(async () => {
 });
 
 const copyToClipboard = async () => {
+    if (!navigator.clipboard) {
+        console.error('Clipboard API not available');
+        return;
+    }
+
     try {
         await navigator.clipboard.writeText(address.value);
         copied.value = true;
