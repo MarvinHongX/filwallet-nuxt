@@ -5,7 +5,7 @@ import { sendTransaction } from '@/commons/commonService';
 const emit = defineEmits(['close']);
 
 const toAddress = ref('');
-const amount = ref('');
+const amount = ref(0);
 const password = ref('');
 
 const onClickSend = async () => {
@@ -55,6 +55,8 @@ const onClickSend = async () => {
                         class="input-field"
                         placeholder="0 FIL"
                         required
+                        step="0.00001"
+                        min="0"
                     />
                 </div>
     
